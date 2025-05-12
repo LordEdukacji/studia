@@ -13,3 +13,5 @@ Zbiór zadań i projektów z ubiegłych semestrów.
 - Wytwarzanie Aplikacji Internetowych
     - strona internetowa - klient
     - strona internetowa - serwer
+- Systemy Operacyjne
+    - program monitorujący zasoby systemowe, Bash

@@ -1,0 +1,118 @@
+./" Manual Resource Monitor - Adrian Dybowski 193483
+.TH resmon 1 "24 May 2023" "1.0" "resmon man page"
+.SH NAME
+Resouce Monitor - Displaying statistics about the usage of system resources (memory, processor, network) by applications over time.
+.SH SYNOPSIS
+.B resmon
+-a [NAME]
+-c [INTEGER]
+-f
+-h
+-i [INTEGER]
+-m [INTEGER]
+-o [NAME]
+-u [NAME]
+-v
+.PP
+.SH DESCRIPTION
+.B Resouce Monitor
+collects resource usage information in given intervals - memory (RSS)[B], processor [%] and network [B].
+.PP
+Press 'p' to pause collecting data.
+.PP
+Press 'q' to quit.
+.PP
+Processes are grouped by name.
+.PP
+The console window displays a table with the current averages for the three categories, calculated as: sum of measurements / number of measurements.
+Table columns refer to: name, memory, processor, network.
+.PP
+The console output can be directed to a .txt file of a given name.
+.PP
+Graphs can be drawn using collected data.
+If a single application is monitored, the graphs will show the change of usage over time.
+If multiple applications are monitored, histograms will be created, displaying the averages for a given number of processes which consume the most.
+.PP
+Both .txt and graph output only happen every set number of measurements.
+.PP
+The script automatically halts execution after 9999 measurements to prevent creating an unlimited number of files.
+.SH OPTIONS
+.TP
+\fB -a [NAME]\fR
+Choice of the application to monitor. The [NAME] field should contain the application's name.
+If the script does not find a corresponding process, execution will halt.
+When an application is chosen, the -f option will produce graph with relationships between resource usage and time.
+.TP
+\fB -c [INTEGER]\fR
+Number of columns on the histograms. Only has effect when -f is used and -a isn't.
+For the histograms only a specified number of applications which consume the most are used and displayed in descending order.
+The default is 6.
+.TP
+\fB -f\fR
+Triggers the creation of graphs using gnuplot.
+Every set number of measurements 3 graphs corresponding to three resource types will be created.
+If a single app is chosen the graphs will illustrate change over time.
+If not, they will be histograms with averages.
+.TP
+\fB -h\fR
+Displays short help with the summary of the options.
+.TP
+\fB -i [INTEGER]\f
+Setting the interval between measurements.
+The default is 10.
+In practice this time will always be larger, as collecting data can take a noticable amount of time.
+.TP
+\fB -m [INTEGER]\f
+Number of intervals between subsequent actions of outputting to graphs/.txt files.
+Only relevant if -o or -f is used.
+The default is 20.
+.TP
+\fB -o [NAME]\f
+The name of the .txt file (without the .txt ending) to which the table should be outputted.
+Happens every chosen number of measurements.
+The file is formatted in the same way as console output, containing only one heading at the beginning.
+.TP
+\fB -u [NAME]\f
+The name of the user whose applications should be monitored.
+Other users' applications are skipped.
+If the user does not exist, the script will terminate.
+.TP
+\fB -v\f
+Short information about the version and author.
+.SH COPYRIGHTS
+Copyright (C) 2023 Adrian Dybowski
+The script utilizes the following libraries and utilities:
+.TP
+\fBtop\fR
+to collect PIDs, memory and processor usage
+.TP
+\fBnetstat\fR
+to collect network usage
+.TP
+\fBgnuplot\fR
+to draw graphs
+.PP
+Copyright (C) 1986 - 1993, 1998, 2004 Thomas Williams, Colin Kelley
+Permission to use, copy, and distribute this software and its documentation for any purpose with or without fee is hereby granted, provided that the above copyright notice appears in all copies and that both that copyright notice and this permission notice appear in supporting documentation.
+.PP
+Permission to modify the software is granted, but not the right to distribute the complete modified source code. Modifications are to be distributed as patches to the released version. Permission to distribute binaries produced by compiling modified sources is granted, provided you
+.IP
+distribute the corresponding source modifications from the released version in the form of a patch file along with the binaries,
+.IP
+add special version identification to distinguish your version in addition to the base release version number,
+.IP
+provide your name and address as the primary contact for the support of your modified version, and
+.IP
+retain our contact information in regard to use of the base software.
+.PP
+Permission to distribute the released version of the source code along with corresponding source modifications in the form of a patch file is granted with the same provisions 2 through 4 for binary distributions.
+.PP
+This software is provided "as is" without express or implied warranty to the extent permitted by applicable law.
+.SH BUGS
+No known bugs.
+.SH SEE ALSO
+Refer to the script's project for the original scope of intended possibilities.
+.SH AUTHOR
+Written by Adrian Dybowski 193483
+.SH REPORTING_BUGS
+s193483@student.pg.edu.pl
