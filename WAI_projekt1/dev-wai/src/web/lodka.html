@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/lightTheme.css">
+    <link rel="stylesheet" type="text/css" href="css/light-jquery-ui.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Łódka - instrukcja</title>
+    <script src="js/themes.js"></script>
+    <script>
+        const instr="lodka";
+    </script>
+    <script src="js/instructions.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="mainTitle">ORIGAMI</div>
+        <nav>
+            <ul>
+                <li><a href="index.html"> Strona główna </a></li>
+                <li><a class="active">Nauka</a>
+                    <ul>
+                        <li><a href="basics.html"> Podstawy </a></li>
+                        <li><a href="instructions.html" class="active"> Instrukcje </a></li>
+                    </ul>
+                </li>
+                <li><a> Modele </a>
+                    <ul>
+                        <li><a href="gallery.html"> Galeria </a></li>
+                        <li><a href="share.html"> Udostępnianie </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="themes">
+            <button onclick="setLightTheme()" id="lightMode">Tryb jasny</button>
+            <button onclick="setContrastTheme()" id="contrastMode">Tryb wysokiego kontrastu</button>
+        </div>
+    </header>
+
+    <main>
+        <h2>Łódka - instrukcja</h2>
+        <section>
+            <h4>Łódka, która wody nie widziała</h4>
+            <p>Do złożenia tego modelu potrzebujemy:</p>
+                <ul>
+                    <li>1 kartka formatu A</li>
+                </ul>
+        </section>
+
+        <h3>Kroki do wykonania:</h3>
+        <div id="instruction">
+            <figure>
+                <img src="lodka/lodka1.png">
+                <figcaption>Rozpoczynamy od modelu <a href="./czako.html">czako</a></figcaption>
+            </figure>
+            <figure>
+                <img src="lodka/lodka2.png">
+                <figcaption>Ściągamy końce czako do siebie i spłaszczamy do kształtu kwadratu</figcaption>
+            </figure>
+            <figure>
+                <img src="lodka/lodka3.png">
+                <figcaption>Zaginamy róg z wierzchniej warstwy do góry</figcaption>
+            </figure>
+            <figure>
+                <img src="lodka/lodka4.png">
+                <figcaption>Odwracamy i na drugiej stronie robimy to samo</figcaption>
+            </figure>
+            <figure>
+                <img src="lodka/lodka5.png">
+                <figcaption>Końce nowego, mniejszego czako ściągamy do siebie</figcaption>
+            </figure>
+            <figure>
+                <img src="lodka/lodka6.png">
+                <figcaption>I spłaszczamy do kształtu kwadratu</figcaption>
+            </figure>
+            <figure>
+                <img src="lodka/lodka7.png">
+                <figcaption>Chwytamy za górne rogi</figcaption>
+            </figure>
+            <figure>
+                <img src="lodka/lodka8.png">
+                <figcaption>I rozciągamy<br>Łódka jest gotowa!</figcaption>
+            </figure>
+        </div>
+        <div id="instructionControls">
+            <button onclick="changeSlide(-1)" id="prevStep"> Poprzedni krok </button>
+            <button onclick="changeSlide(1)" id="nextStep"> Następny krok </button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Moje hobby - Dybowski Adrian 193483 </p>
+    </footer>
+</body>
+
+</html>

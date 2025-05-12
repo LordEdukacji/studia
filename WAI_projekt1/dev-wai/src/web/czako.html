@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/lightTheme.css">
+    <link rel="stylesheet" type="text/css" href="css/light-jquery-ui.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Czako - instrukcja</title>
+    <script src="js/themes.js"></script>
+    <script>
+        const instr="czako";
+    </script>
+    <script src="js/instructions.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="mainTitle">ORIGAMI</div>
+        <nav>
+            <ul>
+                <li><a href="index.html"> Strona główna </a></li>
+                <li><a class="active">Nauka</a>
+                    <ul>
+                        <li><a href="basics.html"> Podstawy </a></li>
+                        <li><a href="instructions.html" class="active"> Instrukcje </a></li>
+                    </ul>
+                </li>
+                <li><a> Modele </a>
+                    <ul>
+                        <li><a href="gallery.html"> Galeria </a></li>
+                        <li><a href="share.html"> Udostępnianie </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="themes">
+            <button onclick="setLightTheme()" id="lightMode">Tryb jasny</button>
+            <button onclick="setContrastTheme()" id="contrastMode">Tryb wysokiego kontrastu</button>
+        </div>
+    </header>
+
+    <main>
+        <h2>Czako - instrukcja</h2>
+        <section>
+            <h4>Czako do zakrycia głowy, ale nie w deszczowy dzień</h4>
+            <p>Do złożenia tego modelu potrzebujemy:</p>
+                <ul>
+                    <li>1 kartka formatu A (rekomendowane: A3)</li>
+                </ul>
+        </section>
+
+        <h3>Kroki do wykonania:</h3>
+        <div id="instruction">
+            <figure>
+                <img src="czako/czako1.png">
+                <figcaption>Zaczynamy od kartki formatu A</figcaption>
+            </figure>
+            <figure>
+                <img src="czako/czako2.png">
+                <figcaption>Zginamy na pół</figcaption>
+            </figure>
+            <figure>
+                <img src="czako/czako3.png">
+                <figcaption>I ponownie zginamy na pół</figcaption>
+            </figure>
+            <figure>
+                <img src="czako/czako4.png">
+                <figcaption>Odginamy poprzednie zgięcie</figcaption>
+            </figure>
+            <figure>
+                <img src="czako/czako5.png">
+                <figcaption>Mając otwartą stronę na dole, górne rogi zaginamy do środka</figcaption>
+            </figure>
+            <figure>
+                <img src="czako/czako6.png">
+                <figcaption>Dolny brzeg zaginamy do góry</figcaption>
+            </figure>
+            <figure>
+                <img src="czako/czako7.png">
+                <figcaption>Rożki zaginamy</figcaption>
+            </figure>
+            <figure>
+                <img src="czako/czako8.png">
+                <figcaption>Z drugiej strony również zaginamy brzeg</figcaption>
+            </figure>
+            <figure>
+                <img src="czako/czako9.png">
+                <figcaption>I również zaginamy rożki.<br>Czako jest gotowe!</figcaption>
+            </figure>
+        </div>
+        <div id="instructionControls">
+            <button onclick="changeSlide(-1)" id="prevStep"> Poprzedni krok </button>
+            <button onclick="changeSlide(1)" id="nextStep"> Następny krok </button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Moje hobby - Dybowski Adrian 193483 </p>
+    </footer>
+</body>
+
+</html>

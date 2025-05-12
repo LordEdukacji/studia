@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Origami</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/lightTheme.css">
+    <link rel="stylesheet" type="text/css" href="css/light-jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="js/themes.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.pictures').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                tClose: 'Zamknij (Esc)',
+                tLoading: 'Ładowanie...',
+                gallery: {
+                    enabled: true,
+                    tPrev: 'Poprzedni (Lewa strzałka)',
+                    tNext: 'Następny (Prawa strzałka)',
+                    tCounter: '%curr% z %total%'
+                },
+                image: {
+                    tError: '<a href="%url%">Obraz</a> nie mógł zostać załadowany.'
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="mainTitle">ORIGAMI</div>
+        <nav>
+            <ul>
+                <li><a href="index.html"> Strona główna </a></li>
+                <li><a>Nauka</a>
+                    <ul>
+                        <li><a href="basics.html"> Podstawy </a></li>
+                        <li><a href="instructions.html"> Instrukcje </a></li>
+                    </ul>
+                </li>
+                <li><a class="active"> Modele </a>
+                    <ul>
+                        <li><a href="gallery.html" class="active"> Galeria </a></li>
+                        <li><a href="share.html"> Udostępnianie </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="themes">
+            <button onclick="setLightTheme()" id="lightMode">Tryb jasny</button>
+            <button onclick="setContrastTheme()" id="contrastMode">Tryb wysokiego kontrastu</button>
+        </div>
+    </header>
+
+    <main>
+        <h2>Galeria modeli origami</h2>
+        <section>
+            <h4>Kliknij zdjęcie, aby powiększyć</h4>
+            <div class="pictures">
+                <a href="gallery/wieniec.png"><img src="gallery/wieniec.png" alt="Wieniec"></a>
+                <a href="gallery/kaczka.png"><img src="gallery/kaczka.png" alt="Kaczka"></a>
+                <a href="gallery/kwiatyPL.jpg"><img src="gallery/kwiatyPL.jpg" alt="Kwiaty"></a>
+                <a href="gallery/roze3.jpg"><img src="gallery/roze3.jpg" alt="3 róże"></a>
+                <a href="gallery/zabka.jpg"><img src="gallery/zabka.jpg" alt="Żabka"></a>
+                <a href="gallery/labedz.jpg"><img src="gallery/labedz.jpg" alt="Łabędź"></a>
+                <a href="gallery/rzecz.jpg"><img src="gallery/rzecz.jpg" alt="Geometryczna bryła"></a>
+                <a href="gallery/kwokamacro.jpg"><img src="gallery/kwokamacro.jpg" alt="Kwoka z bliska"></a>
+                <a href="gallery/roza.jpg"><img src="gallery/roza.jpg" alt="Róża"></a>
+                <a href="gallery/orzel.jpg"><img src="gallery/orzel.jpg" alt="Orzeł"></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Moje hobby - Dybowski Adrian 193483 </p>
+    </footer>
+
+</body>
+
+</html>

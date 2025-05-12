@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/lightTheme.css">
+    <link rel="stylesheet" type="text/css" href="css/light-jquery-ui.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="js/themes.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Origami</title>
+    <script>
+        $(function () {
+            $(document).tooltip();
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="mainTitle">ORIGAMI</div>
+        <nav>
+            <ul>
+                <li><a href="index.html"> Strona główna </a></li>
+                <li><a>Nauka</a>
+                    <ul>
+                        <li><a href="basics.html"> Podstawy </a></li>
+                        <li><a href="instructions.html"> Instrukcje </a></li>
+                    </ul>
+                </li>
+                <li><a class="active"> Modele </a>
+                    <ul>
+                        <li><a href="gallery.html"> Galeria </a></li>
+                        <li><a href="share.html" class="active"> Udostępnianie </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="themes">
+            <button onclick="setLightTheme()" id="lightMode">Tryb jasny</button>
+            <button onclick="setContrastTheme()" id="contrastMode">Tryb wysokiego kontrastu</button>
+        </div>
+    </header>
+    <main>
+        <h2>Podziel się swoimi modelami ze światem</h2>
+        <form action="receive.php" method="post">
+            <input type="reset" value="Resetuj"><br>
+
+            <label for="imie"> Imię: </label><br>
+            <input type="text" id="imie" name="imie" title="Imię osoby składającej model" required><br>
+
+            <label for="nazwa"> Nazwa modelu: </label><br>
+            <input type="text" id="nazwa" name="nazwa" title="Nazwa złożonego modelu" required><br>
+
+            Autorstwo:
+            <input type="radio" id="oryginalny" name="autor" value="oryginalny"
+                title="Wybierz, jeśli samodzielnie zaprojektowałeś udostępniony model" required>
+            <label for="oryginalny">Oryginalna twórczość</label>
+            <input type="radio" id="inny" name="autor" value="inny"
+                title="Wybierz, jeśli udostępniasz model zaprojektowany przez inną osobę">
+            <label for="inny">Inny twórca</label><br><br>
+
+            <label for="trudnosc">Trudność</label>
+            <input type="range" id="trudnosc" name="trudnosc" min="1" max="5"
+                title="Trudność złożonego modelu w skali od 1 do 5"><br>
+
+            <label for="zdjecie"> Zdjęcie: </label><br>
+            <input type="file" id="zdjecie" name="zdjecie" accept="image/png, image/jpeg"
+                title="Zdjęcie złożonego modelu. Akceptowalne formaty plików: .jpg, .png" required><br><br>
+
+            <input type="submit" value="Prześlij">
+
+        </form>
+    </main>
+
+    <footer>
+        <p>Moje hobby - Dybowski Adrian 193483 </p>
+    </footer>
+
+</body>
+
+</html>

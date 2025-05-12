@@ -1,0 +1,83 @@
+body {
+    background-color: black;
+    color: yellow;
+}
+
+header {
+    background-color: black;
+    border-bottom: 1px solid yellow;
+}
+
+#mainTitle {
+    color: yellow;
+}
+
+a {
+    color: orange;
+}
+
+nav > ul > li > a {
+    color: yellow;
+}
+
+nav > ul > li:hover > a,
+nav > ul > li a.active,
+nav > ul > li > ul > li:hover > a {
+    background-color:yellow;
+    color: black;
+}
+
+nav > ul > li > ul {
+    background-color: black;
+}
+
+nav > ul > li > ul > li > a {
+    color: yellow;
+}
+
+nav > ul > li {
+    border-right: 1px solid yellow;
+    border-left: 1px solid yellow;
+}
+
+nav > ul > li:hover > ul {
+    background-color: black;
+}
+
+h1 span:hover {
+    color: orange;
+}
+
+form {
+    border: 5px solid yellow;
+    background-color: black;
+}
+
+input {
+    color: black;
+    background-color: yellow;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: orange;
+}
+
+section, figure {
+    background-color: yellow;
+    color: black;
+}
+
+#prevStep, #nextStep {
+    border: none;
+    color: black;
+    background-color:yellow;
+}
+
+#prevStep:hover, #nextStep:hover {
+    background-color: orange;
+}
+
+footer {
+    background-color: yellow;
+    color: black;
+}

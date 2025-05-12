@@ -1,0 +1,85 @@
+body {
+    background-color: aliceblue;
+    color: black;
+}
+
+header {
+    background-color: deepskyblue;
+    color: white;
+}
+
+#largeTitle {
+    background-color:lightgray;
+}
+
+nav > ul > li > a, nav > ul > li > ul > li > a {
+    color: white;
+}
+
+nav > ul > li:hover > a,
+nav > ul > li a.active,
+nav > ul > li > ul > li:hover > a {
+    background-color:dodgerblue;
+}
+
+nav > ul > li > ul {
+    background-color: deepskyblue;
+}
+
+nav > ul > li:hover > ul {
+    background-color: deepskyblue;
+}
+
+nav > ul > li {
+    border-right: 1px solid white;
+}
+
+nav > ul > li:last-child {
+    border-right: none;
+}
+
+a {
+    color: darkblue;
+}
+
+h1, h2 {
+    color: darkblue;
+}
+
+h1 span:hover {
+    color: black;
+}
+
+form {
+    border: 5px solid deepskyblue;
+    background-color: lightskyblue;
+}
+
+input[type="submit"], input[type="reset"] {
+    background-color: deepskyblue;
+    border: 2px solid dodgerblue;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: dodgerblue;
+    border: 2px solid darkblue;
+}
+
+section, figure {
+    background-color: lightskyblue;
+}
+
+#prevStep, #nextStep {
+    border: none;
+    color: white;
+    background-color: deepskyblue;
+}
+
+#prevStep:hover, #nextStep:hover {
+    background-color: dodgerblue;
+}
+
+footer {
+    color: white;
+    background-color: darkblue;
+}
